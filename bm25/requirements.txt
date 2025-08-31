@@ -1,0 +1,11 @@
+flask
+transformers
+torch
+pdfplumber
+rank_bm25
+nltk
+pytest
+jiwer
+scikit-learn
+bert_score
+sentence_transformers
