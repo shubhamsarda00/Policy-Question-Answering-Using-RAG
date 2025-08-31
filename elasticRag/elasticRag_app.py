@@ -167,7 +167,7 @@ def retrieve():
             "sources": results
         })
 
-os.environ['OPENAI_API_KEY'] = 'sk-xpZI1AehtXlMCE7G1ZzhIfHPTQ6F4NXQrpAwkj5zKaT3BlbkFJaHrJInF4uLx_8UMrEQpDjRNuSBdUH8MqSymSByhT8A'
+os.environ['OPENAI_API_KEY'] = 'TBD'
 client = OpenAI(
   api_key=os.environ['OPENAI_API_KEY'],
 )
@@ -226,4 +226,5 @@ def get_answer():
         return render_template('ui.html', query=query, answer=response.choices[0].message.content, source=sources)
 
 if __name__ == "__main__":
+
     app.run(host='0.0.0.0', port=8080, debug=True)
