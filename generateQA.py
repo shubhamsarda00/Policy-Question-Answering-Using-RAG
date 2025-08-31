@@ -46,7 +46,7 @@ def chunkDocument(document, max_chunk_size=500):
 
 documentChunks = [chunkDocument(doc) for doc in documents]
 
-os.environ['OPENAI_API_KEY'] = 'sk-xpZI1AehtXlMCE7G1ZzhIfHPTQ6F4NXQrpAwkj5zKaT3BlbkFJaHrJInF4uLx_8UMrEQpDjRNuSBdUH8MqSymSByhT8A'
+os.environ['OPENAI_API_KEY'] = 'TBD'
 client = OpenAI(
   api_key=os.environ['OPENAI_API_KEY'],
 )
@@ -160,4 +160,5 @@ for chunk in documentChunksFlat:
 
 with open('maskedTest.jsonl', 'w',encoding= 'utf-8') as jsonl_file:
     for item in maskedQaPairs:
+
         jsonl_file.write(json.dumps(item) + '\n')
