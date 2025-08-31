@@ -1,0 +1,18 @@
+cluster.name: my-cluster
+node.name: my-node
+discovery.type: single-node
+
+network.host: 0.0.0.0
+http.port: 9200
+
+# Disable security features
+xpack.security.enabled: false
+xpack.security.transport.ssl.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.authc.api_key.enabled: false
+
+#xpack.security.enrollment.enabled: false
+
+# Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents
+
+# Enable encryption and mutual authentication between cluster nodes

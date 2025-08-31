@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answering</title>
+</head>
+<body>
+    <h1>Ask a Question</h1>
+    <form action="/answer" method="POST">
+        <label for="query">Enter your question:</label><br><br>
+        <input type="text" id="query" name="query" size="60" placeholder="How many paid sick leaves do I have?" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if answer %}
+        <h2>Response:</h2>
+        <p><strong>Answer:</strong> {{ answer }}</p>
+        <p><strong>Source(s):</strong> {{ source }}</p>
+    {% endif %}
+</body>
+</html>
+
